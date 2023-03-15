@@ -48,6 +48,30 @@
             <p>Twitter: <br><a href="https://twitter.com/HannahLermanda"  target=”_blank”><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png" alt="Twitter logo" width="200" height="150"><br>@HannahLermanda</a></p>
             <br>
     </section>
+    <section>
+        <h2>Leave a Message</h2>
+            <form name="leave_message">
+                <label for ="usersName">Your Name:</label>
+                    <input type="text" id="usersName" name="usersName" required="true">
+                <br>
+                <br>
+                <label for ="usersEmail">Your Email:</label>
+                    <input type="email" id="usersEmail" name="usersEmail" required="true" placeholder="abc@email.com" >
+                <br>
+                <br>
+                <label for ="usersMessage">Your Message:</label>
+                <br>
+                    <textarea id="usersMessage" name="usersMessage" required="true" rows="20" cols="60"></textarea>
+                <br>
+                <label for ="submitMessage"></label>
+                    <button type="submit">Submit</button>
+            </form>
+    </section>
+    <br>
+    <section id="messages">
+        <h2>Messages</h2>
+        <ul></ul>
+    </section>
     <footer></footer>
     <script src="js/index.js"></script>
 </body>
