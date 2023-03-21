@@ -24,3 +24,61 @@ for (let i = 0; i < skills.length; i++){
     skill.innerText = skills[i];
     skillsList.appendChild(skill);
 }
+
+//Handle Message Form Submit
+
+window.addEventListener('load', function() {
+    // Hide the message section when the page loads
+    document.getElementById("messages").style.display = "none";
+  });
+  
+let messageForm = document.querySelector('[name="leave_message"]');
+
+messageForm.addEventListener('submit', submitForm);
+
+function submitForm() {
+    let finalusersName = event.target.usersName.value;
+    let finalusersEmail = event.target.usersEmail.value;
+    let finalusersMessage = event.target.usersMessage.value;
+
+    console.log(finalusersName, finalusersEmail, finalusersMessage);
+
+    event.preventDefault();
+
+    let messageSection = document.getElementById("messages");
+
+    let messageList = messageSection.querySelector('ul');
+
+    let newMessage = document.createElement('li');
+ 
+    newMessage.innerHTML = `<a href="mailto:${finalusersEmail}">${finalusersName}</a> wrote: <span>${finalusersMessage} </span>`;
+
+    let removeButton = document.createElement('button');
+
+    removeButton.innerHTML = 'Remove';
+    removeButton.type = 'button';
+    
+    removeButton.addEventListener('click', () => {
+        let entry = removeButton.parentNode;
+        entry.remove();
+        if( messageList.childElementCount === 0){
+            document.getElementById("messages").style.display = "none";
+        } else {
+            document.getElementById("messages").style.display = "block";
+        }
+    });
+
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
+
+    messageForm.reset();
+
+    //Shows the message section when a comment is made
+    document.getElementById("messages").style.display = "block";
+
+    newMessage.appendChild(editMessageButton);
+    messageList.appendChild(newMessage);
+
+    
+
+}
