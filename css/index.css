@@ -3,12 +3,12 @@
     line-height: 1.5;
     letter-spacing: .05rem;
     font-family: 'Varela Round', sans-serif;
+    box-sizing: border-box;
 }
 
 body{
     background-image: url("https://cdn.wallpapersafari.com/39/24/tjwspa.jpg");
     background-repeat: repeat-y;
-    background-size: contain;
 }
 
 p, ul, label, a {
@@ -38,6 +38,59 @@ ul{
     padding-left: 20px;
     background-clip:initial;
 }
+
+/*Nav Bar*/
+/*nav{
+    background: rgb(15,113,177);
+    background: linear-gradient(180deg, rgba(15,113,177,1) 17%, rgba(21,85,170,1) 52%, rgba(0,63,145,1) 79%);
+    max-height: 150px;
+    position:static;
+    min-height: 50px;
+    max-height:250px;
+    height: auto;
+    width:auto;
+    display:flex;
+}
+
+nav a{
+    display: flex;
+    flex:auto;
+    flex-direction: row;
+    justify-content: space-around;
+}*/
+
+nav {
+    background: rgb(15,113,177);
+    background: linear-gradient(180deg, rgba(15,113,177,1) 17%, rgba(21,85,170,1) 52%, rgba(0,63,145,1) 79%);
+    max-height: 150px;
+    position: static;
+    min-height: 50px;
+    max-height: 250px;
+    height: auto;
+    width: 100%; /* modified */
+    display: flex;
+    justify-content: center; /* added */
+    margin: 0; /* added */
+    padding: 0; /* added */
+}
+
+nav a {
+    display: flex;
+    flex:auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+}
+
 /* Skills Section*/
 
 #skillsList.ul{
@@ -123,9 +176,7 @@ section{
     font-size: 75px;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.144);
     filter: contrast(1.15) brightness(1.2);
-    display:flex;
-    justify-content: center;
-    align-content: center;
+    text-align: center;
 }
 
 /*About*/
@@ -204,6 +255,11 @@ button:hover{
 
 textarea{
     margin-top: 20px;
+    width: 100%;
+}
+
+div textarea{
+    width: 100%;
 }
 
 #leaveMessage{
@@ -239,5 +295,5 @@ footer p{
     display: flex;
     justify-content: center;
     align-content: center;
-
+    text-align: center;
 }

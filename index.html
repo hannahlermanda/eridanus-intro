@@ -9,6 +9,7 @@
         <a href="#About">About Me</a>
         <a href="#techExperience">My Experience</a>
         <a href="#Connect">Where to Find Me</a>
+        <a href="#messageSection">Leave a Message</a>
     </nav>
     <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,7 +57,7 @@
             </div>
     </section>
     <section>
-        <h2>Leave a Message</h2>
+        <h2 id="messageSection">Leave a Message</h2>
             <form id="leaveMessage" name="leave_message">
                 <section id="usersNameSection">
                     <label for ="usersName">Your Name:</label>
@@ -73,7 +74,9 @@
                 <section id="usersMessageSection">
                 <label id= "yourMessage" for ="usersMessage">Your Message:</label>
                 <br>
+                <div>
                     <textarea id="usersMessage" name="usersMessage" required="true" rows="20" cols="150"></textarea>
+                </div>
                 <br>
                 </section>
                 <label for ="submitMessage"></label>
