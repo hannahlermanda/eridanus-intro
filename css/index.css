@@ -1,0 +1,243 @@
+* {
+    scroll-behavior: smooth;
+    line-height: 1.5;
+    letter-spacing: .05rem;
+    font-family: 'Varela Round', sans-serif;
+}
+
+body{
+    background-image: url("https://cdn.wallpapersafari.com/39/24/tjwspa.jpg");
+    background-repeat: repeat-y;
+    background-size: contain;
+}
+
+p, ul, label, a {
+    font-size: 21px;
+    color: #E0D8DE;
+}
+
+h2 {
+    color: #06D6A0;
+    font-size: 45px;
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px #210124;
+}
+
+h3, .listHeadings {
+    font-size: 25px;
+    color: #210124;
+}
+
+li{
+    list-style: none;
+}
+
+ul{
+    background-color: #16009141;
+    border-radius: 30px;
+    padding-left: 20px;
+    background-clip:initial;
+}
+/* Skills Section*/
+
+#skillsList.ul{
+    background: rgb(15,113,177);
+    background: linear-gradient(180deg, rgba(15,113,177,1) 17%, rgba(21,85,170,1) 52%, rgba(0,63,145,1) 79%);
+    border-radius: 30px;
+    padding-left: 20px;
+    background-clip:initial;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+#skillsList li{
+ display: inline-block;
+  background-color: #16009141;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 15px;
+}
+
+#skillsList {
+    border-radius: 30px;
+    padding: 20px;
+  }
+  
+  #skillsList ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    background-clip: initial;
+  }
+  
+.listHeadings{
+    text-shadow: .5px 0 #E0D8DE, -.5px 0 #E0D8DE, 0 .5px #E0D8DE, 0 -.5px #E0D8DE,
+    .75px .75px #E0D8DE, -.75px -.75px #E0D8DE, .75px -.75px #E0D8DE, -.75px .75px #E0D8DE; 
+}
+
+/*About*/
+
+#aboutMe{
+    background: rgb(15,113,177);
+    background: linear-gradient(180deg, rgba(15,113,177,1) 17%, rgba(21,85,170,1) 52%, rgba(0,63,145,1) 79%);
+    border-radius: 30px;
+    padding: 20px;
+}
+
+/*Tech Experience*/
+
+.techExperienceFullList{
+    background: rgb(15,113,177);
+    background: linear-gradient(180deg, rgba(15,113,177,1) 17%, rgba(21,85,170,1) 52%, rgba(0,63,145,1) 79%);
+    border-radius: 50px;
+}
+
+.transparentContainers{
+    background-color: rgba(0, 139, 139, 0.3); 
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 5px;
+    border-radius: 50px;
+}
+
+/*Sections*/
+
+section{
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+/*Header*/
+
+#myName{
+    font-family: 'Fredoka One', cursive;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url("https://media.istockphoto.com/id/178480614/photo/rubber-duck.jpg?s=612x612&w=0&k=20&c=nv0J6-gSTewQJb8KXxu21o3kQ0Cx7aokrE7TxsSCfNM=");
+    font-size: 75px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.144);
+    filter: contrast(1.15) brightness(1.2);
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/*About*/
+
+#aboutSection{
+    margin-bottom: 70px;
+}
+
+/*Connect*/
+
+#connections{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    background: rgb(15,113,177);
+    background: linear-gradient(180deg, rgba(15,113,177,1) 17%, rgba(21,85,170,1) 52%, rgba(0,63,145,1) 79%);
+}
+
+a{
+    text-decoration: none;
+}
+
+.mediaHeadings{
+    text-shadow: .5px 0 #16009141, -.5px 0 #16009141, 0 .5px #16009141, 0 -.5px #16009141,
+    .75px .75px #16009141, -.75px -.75px #16009141, .75px -.75px #16009141, -.75px .75px #16009141; 
+}
+
+.transparentContainersConnect{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 5px;
+    border-radius: 30px;
+}
+
+/*Leave a Message*/
+
+button{
+    background-color: #E0D8DE;
+    color: #210124;
+    border-color: #210124;
+    border-radius: 25px;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    grid-area: submitMessageButton;
+    width: 124px;
+    margin-left: 50px;
+}
+
+button:hover{
+    background: rgb(15,113,177);
+    background: linear-gradient(180deg, rgba(15,113,177,1) 17%, rgba(21,85,170,1) 52%, rgba(0,63,145,1) 79%);
+    color: #E0D8DE ;
+    border-color: rgb(15,113,177);
+    border-color: linear-gradient(180deg, rgba(15,113,177,1) 17%, rgba(21,85,170,1) 52%, rgba(0,63,145,1) 79%);
+}
+
+
+#usersNameSection{
+    grid-area: usersName;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+}
+
+#usersEmailSection{
+    grid-area: usersEmail;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+}
+
+#usersMessageSection{
+    grid-area: usersMessage;
+}
+
+textarea{
+    margin-top: 20px;
+}
+
+#leaveMessage{
+    display: grid;
+    grid-template-areas: 'usersName userName userName userName usersEmail usersEmail usersEmail usersEmail'
+                          'usersMessage usersMessage usersMessage usersMessage usersMessage usersMessage usersMessage usersMessage'
+                           'submitMessageButton . . . . . . .';
+}
+
+
+/*Messages*/
+#messages button{
+    font-size: 18px;
+}
+
+#messages ul{
+    padding-bottom: 20px;
+}
+
+/*Footer*/
+footer{
+    background: rgb(15,113,177);
+    background: linear-gradient(180deg, rgba(15,113,177,1) 17%, rgba(21,85,170,1) 52%, rgba(0,63,145,1) 79%);
+    bottom: 0;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+footer p{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}

@@ -7,62 +7,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <nav>
         <a href="#About">About Me</a>
-        <a href="#Experience">My Experience</a>
+        <a href="#techExperience">My Experience</a>
         <a href="#Connect">Where to Find Me</a>
     </nav>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hannah Emily Lermanda</h1>
+    <h1 id="myName">Hannah Emily Lermanda</h1>
     <br>
-    <Section>
+    <Section id="aboutSection">
         <h2 id="About">About</h2>
-            <p>I am a curious and hard-working student looking to break into tech.
+            <p id="aboutMe">I am a curious and hard-working student looking to break into tech.
                 I love trying new things and encountering challenges. 
                 My interests are web development, video game development, and having fun making new products! 
             </p>
     </Section>
-    <section>
-        <h2 id="Experience">Tech Experience</h2>
-            <h3>Introduction to C# Programming (Introduction to C# Programming Certificate of Completion) - April 2022</h3>
-            <ul>
-                <li>Completed the Introduction to C# Programming Self-Paced Tutorial online</li>
-                <li>Los Angeles Pierce College</li>
-            </ul></p>
-            <h3>Intro to G{Code} - Fall 2022</h3>
-            <ul>
-                <li>Completed the 12 week Intro to G{Code} cohort program</li>
-                <li>Learned HTML, CSS, and JavaScript</li>
-                <li>Created 2 multi-page websites</li>
-            </ul></p>
+    <section id = "techExperience">
+            <h2>Tech Experience</h2>
+                <div class="transparentContainers techExperienceFullList">
+                    <h3 class="listHeadings">Introduction to C# Programming (Introduction to C# Programming Certificate of Completion) - April 2022</h3>
+                    <ul>
+                        <li>Completed the Introduction to C# Programming Self-Paced Tutorial online</li>
+                        <li>Los Angeles Pierce College</li>
+                    </ul></p>
+                    <h3 class="listHeadings">Intro to G{Code} - Fall 2022</h3>
+                    <ul>
+                        <li>Completed the 12 week Intro to G{Code} cohort program</li>
+                        <li>Learned HTML, CSS, and JavaScript</li>
+                        <li>Created 2 multi-page websites</li>
+                    </ul></p>
+                </div>
     </section>
     <section id="skills">
         <h2>Skills</h2>
-            <ul>
+            <ul id="skillsList" class="ul">
                 
             </ul>
     </section>
     <section>
         <h2 id="Connect">Connect</h2>
-            <p>Github: <br><a href="https://github.com/hannahlermanda"  target=”_blank”><img src="https://1000logos.net/wp-content/uploads/2018/11/GitHub-logo.jpg" alt= "Github logo" width="200" height="150"><br>hannahlermanda </a></p>
-            <br>
-            <p>Twitter: <br><a href="https://twitter.com/HannahLermanda"  target=”_blank”><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png" alt="Twitter logo" width="200" height="150"><br>@HannahLermanda</a></p>
-            <br>
+            <div id="connections" class="transparentContainers">
+                <p class="listHeadings transparentContainersConnect">Github: <br><a class="mediaHeadings" href="https://github.com/hannahlermanda"  target=”_blank”><img src="images/GitHub-logo-removebg-preview.png" alt= "Github logo" width="250" height="150"><br>hannahlermanda </a></p>
+                <br>
+                <p class="listHeadings transparentContainersConnect">Twitter: <br><a class= "mediaHeadings" href="https://twitter.com/HannahLermanda"  target=”_blank”><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png" alt="Twitter logo" width="200" height="150"><br>@HannahLermanda</a></p>
+            </div>
     </section>
     <section>
         <h2>Leave a Message</h2>
-            <form name="leave_message">
-                <label for ="usersName">Your Name:</label>
-                    <input type="text" id="usersName" name="usersName" required="true">
+            <form id="leaveMessage" name="leave_message">
+                <section id="usersNameSection">
+                    <label for ="usersName">Your Name:</label>
+                        <input type="text" id="usersName" name="usersName" required="true">
+                </section>
                 <br>
                 <br>
-                <label for ="usersEmail">Your Email:</label>
-                    <input type="email" id="usersEmail" name="usersEmail" required="true" placeholder="abc@email.com" >
+                <section id="usersEmailSection">
+                    <label for ="usersEmail">Your Email:</label>
+                        <input type="email" id="usersEmail" name="usersEmail" required="true" placeholder="abc@email.com" >
+                </section>
                 <br>
                 <br>
-                <label for ="usersMessage">Your Message:</label>
+                <section id="usersMessageSection">
+                <label id= "yourMessage" for ="usersMessage">Your Message:</label>
                 <br>
-                    <textarea id="usersMessage" name="usersMessage" required="true" rows="20" cols="60"></textarea>
+                    <textarea id="usersMessage" name="usersMessage" required="true" rows="20" cols="150"></textarea>
                 <br>
+                </section>
                 <label for ="submitMessage"></label>
                     <button type="submit">Submit</button>
             </form>
