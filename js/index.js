@@ -78,7 +78,47 @@ function submitForm() {
 
     newMessage.appendChild(editMessageButton);
     messageList.appendChild(newMessage);
-
-    
-
 }
+
+//Fetch GitHub Repositories
+
+const githubRequest = new XMLHttpRequest();
+
+githubRequest.open('GET', 'https://api.github.com/users/hannahlermanda/repos');
+
+githubRequest.send();
+
+githubRequest.addEventListener("load", function () {
+    const repositories = JSON.parse(this.response);
+    console.log(repositories);
+
+    //Display Repositories in List
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.querySelector('ul');
+
+    for (i=0; i < repositories.length; i++){
+        let fullRepository = repositories[i];
+
+        let project = document.createElement('li');
+
+        project.innerText = fullRepository.name;
+        project.innerText = fullRepository.updated_at;
+        project.innerText = fullRepository.description;
+
+        let projectLink = document.createElement('a');
+            projectLink.href = fullRepository.html_url;
+            projectLink.target = '_blank';
+
+        let repositoryName = document.createElement('p');
+            repositoryName.textContent = fullRepository.name;
+            projectLink.appendChild(repositoryName);
+
+        project.classList.add('projectListItem');
+        project.classList.add('projectListItemUl');
+        repositoryName.classList.add('nameOfRepository');
+        
+        project.appendChild(projectLink);
+        projectList.appendChild(project);
+    }
+})
+
