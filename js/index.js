@@ -82,15 +82,13 @@ function submitForm() {
 
 //Fetch GitHub Repositories
 
-const githubRequest = new XMLHttpRequest();
+fetch('https://api.github.com/users/hannahlermanda/repos', {
+    mode: 'cors'
+})
 
-githubRequest.open('GET', 'https://api.github.com/users/hannahlermanda/repos');
-
-githubRequest.send();
-
-githubRequest.addEventListener("load", function () {
-    const repositories = JSON.parse(this.response);
-    console.log(repositories);
+  .then(response => response.json())
+  .then(repositories => {
+    repositories.sort((repository1Date, repository2Date) => new Date(repository2Date.updated_at) - new Date(repository1Date.updated_at));
 
     //Display Repositories in List
     const projectSection = document.getElementById("projects");
@@ -120,5 +118,10 @@ githubRequest.addEventListener("load", function () {
         project.appendChild(projectLink);
         projectList.appendChild(project);
     }
-})
+    }
+) .catch(error => {
+    console.error('Error fetching data:', error);
+    window.alert('There was an error fetching GitHub data.');
+    }
+);
 

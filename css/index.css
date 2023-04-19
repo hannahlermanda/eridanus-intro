@@ -328,11 +328,31 @@ div textarea{
 
 #leaveMessage{
     display: grid;
-    grid-template-areas: 'usersName userName userName userName usersEmail usersEmail usersEmail usersEmail'
+    grid-template-areas: 'usersName usersName usersName usersName usersEmail usersEmail usersEmail usersEmail'
                           'usersMessage usersMessage usersMessage usersMessage usersMessage usersMessage usersMessage usersMessage'
                            'submitMessageButton . . . . . . .';
 }
 
+@media screen and (max-width: 600px){
+    #leaveMessage{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #usersNameSection,
+    #usersEmailSection {
+        padding-bottom: 0px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 512px){
+    #usersNameSection,
+    #usersEmailSection,
+    #yourMessage {
+        text-align: center;
+    }
+}
 
 /*Messages*/
 #messages button{
