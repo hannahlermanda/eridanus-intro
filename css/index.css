@@ -236,7 +236,8 @@ section{
 }
 
 .projectListItemUl:hover,
-.nameOfRepository:hover {
+.nameOfRepository:hover,
+.projectListItemUl:hover p {
     background-color: #06D6A0;
     color: black;
 }
@@ -329,18 +330,23 @@ button:hover{
 
 
 #usersNameSection{
+   /* display: grid;*/
     grid-area: usersName;
     padding-bottom: 10px;
     margin-bottom: 50px;
+    grid-auto-flow: column;
 }
 
 #usersEmailSection{
+    /* display: grid;*/
     grid-area: usersEmail;
     padding-bottom: 10px;
     margin-bottom: 50px;
+    grid-auto-flow: column;
 }
 
 #usersMessageSection{
+
     grid-area: usersMessage;
 }
 
@@ -355,9 +361,15 @@ div textarea{
 
 #leaveMessage{
     display: grid;
-    grid-template-areas: 'usersName usersName usersName usersName usersEmail usersEmail usersEmail usersEmail'
+    grid-template-areas: 'usersName usersName usersName ... ... usersEmail usersEmail usersEmail'
                           'usersMessage usersMessage usersMessage usersMessage usersMessage usersMessage usersMessage usersMessage'
                            'submitMessageButton . . . . . . .';
+}
+
+input#usersEmail,
+input#usersName{
+    max-width: 80%;
+    /*margin-left: 20px;*/
 }
 
 @media screen and (max-width: 600px){

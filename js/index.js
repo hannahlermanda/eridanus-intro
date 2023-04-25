@@ -108,6 +108,10 @@ fetch('https://api.github.com/users/hannahlermanda/repos', {
             projectLink.href = fullRepository.html_url;
             projectLink.target = '_blank';
 
+            projectLink.style.display = 'block';
+            projectLink.style.width = '100%';
+            projectLink.style.height = '100%';
+
         let repositoryName = document.createElement('p');
             repositoryName.textContent = fullRepository.name;
             projectLink.appendChild(repositoryName);
