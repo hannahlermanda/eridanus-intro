@@ -68,6 +68,8 @@ function submitForm() {
         }
     });
 
+    removeButton.classList.add('removeButton');
+
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
 
@@ -76,7 +78,6 @@ function submitForm() {
     //Shows the message section when a comment is made
     document.getElementById("messages").style.display = "block";
 
-    newMessage.appendChild(editMessageButton);
     messageList.appendChild(newMessage);
 }
 

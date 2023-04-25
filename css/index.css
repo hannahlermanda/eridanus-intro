@@ -89,11 +89,29 @@ nav a {
     text-decoration: none;
 }
 
+nav a:hover{
+    background-color: #06D6A0;
+    color: black;
+}
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
         align-items: center;
         padding: 0;
+    }
+
+    nav:hover{
+            background-color: #06D6A0;
+            cursor: pointer;
+    }
+
+    nav a {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    width: 100%;
+    align-items: center;
     }
 }
 
@@ -217,6 +235,14 @@ section{
     text-align: center;
 }
 
+.projectListItemUl:hover,
+.nameOfRepository:hover {
+    background-color: #06D6A0;
+    color: black;
+}
+
+
+
 .ignoreUl{
     background-color: transparent;
 }
@@ -298,6 +324,7 @@ button:hover{
     color: #E0D8DE ;
     border-color: rgb(15,113,177);
     border-color: linear-gradient(180deg, rgba(15,113,177,1) 17%, rgba(21,85,170,1) 52%, rgba(0,63,145,1) 79%);
+    cursor: pointer;
 }
 
 
@@ -357,10 +384,18 @@ div textarea{
 /*Messages*/
 #messages button{
     font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.removeButton:hover{
+    background: #06D6A0;
+    color: black;
 }
 
 #messages ul{
     padding-bottom: 20px;
+    background: rgb(15,113,177);
+    background: linear-gradient(180deg, rgba(15,113,177,1) 17%, rgba(21,85,170,1) 52%, rgba(0,63,145,1) 79%);
 }
 
 /*Footer*/
@@ -372,7 +407,7 @@ footer{
     display: flex;
     justify-content: center;
     align-content: center;
-
+    margin-top: 50px;
 }
 
 footer p{
