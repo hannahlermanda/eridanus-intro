@@ -130,3 +130,25 @@ fetch('https://api.github.com/users/hannahlermanda/repos', {
     }
 );
 
+/*Scroll to Top*/
+// Get the button
+let scrollToTop = document.getElementById("scrollToTop");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+    scrollFunction()
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollToTop.style.display = "block";
+  } else {
+    scrollToTop.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+scrollToTop.addEventListener("click", () => {
+    window.scrollTo(0, 0);
+    }
+);

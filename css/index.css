@@ -308,7 +308,7 @@ a{
 
 /*Leave a Message*/
 
-button{
+#submitButton{
     background-color: #E0D8DE;
     color: #210124;
     border-color: #210124;
@@ -321,7 +321,7 @@ button{
     margin-left: 50px;
 }
 
-button:hover{
+#submitButton:hover{
     background: rgb(15,113,177);
     background: linear-gradient(180deg, rgba(15,113,177,1) 17%, rgba(21,85,170,1) 52%, rgba(0,63,145,1) 79%);
     color: #E0D8DE ;
@@ -386,7 +386,7 @@ input#usersName{
         margin-bottom: 5px;
     }
 
-    button{
+    #submitButton{
         margin-left: auto;
         margin-right: auto;
     }
@@ -406,6 +406,8 @@ input#usersName{
     margin-bottom: 10px;
     padding: 3px;
     margin-left: 10px;
+    border-color: #210124;
+    border-radius: 25px;
 }
 
 #messages li{
@@ -543,3 +545,38 @@ footer p{
    
 }
 
+/*Scroll To Top*/
+#scrollToTop{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 7px;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: #f6d70ed5;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  max-width: 50px;
+  max-height: 50px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+#scrollToTop:hover{
+    background-color: #06D6A0;
+    color: white;
+}
+
+@media screen and (max-width: 784px) {
+    #scrollToTop{
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        padding: 8px;
+    }
+    
+}
